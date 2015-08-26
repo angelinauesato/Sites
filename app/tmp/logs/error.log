@@ -244,3 +244,49 @@ Request URL: /user
 Stack Trace:
 #0 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2015-08-26 15:33:10 Error: [MissingComponentException] Component class ToolbarComponent could not be found.
+Exception Attributes: array (
+  'class' => 'ToolbarComponent',
+  'plugin' => 'DebugKit',
+)
+Request URL: /users
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Controller/ComponentCollection.php(53): ComponentCollection->load('DebugKit.Toolba...', Array)
+#1 /Users/Uesato/Sites/lib/Cake/Controller/Controller.php(643): ComponentCollection->init(Object(UsersController))
+#2 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(188): Controller->constructClasses()
+#3 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-26 15:33:22 Error: [MissingComponentException] Component class DebugKitComponent could not be found.
+Exception Attributes: array (
+  'class' => 'DebugKitComponent',
+  'plugin' => false,
+)
+Request URL: /users
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Controller/ComponentCollection.php(53): ComponentCollection->load('DebugKit', Array)
+#1 /Users/Uesato/Sites/lib/Cake/Controller/Controller.php(643): ComponentCollection->init(Object(UsersController))
+#2 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(188): Controller->constructClasses()
+#3 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-26 15:39:47 Error: Fatal Error (1): Call to a member function success() on null in [/Users/Uesato/Sites/app/Controller/UsersController.php, line 64]
+2015-08-26 15:39:47 Error: [FatalErrorException] Call to a member function success() on null
+Request URL: /users/add
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Users/Uesato/S...', 64)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Users/Uesato/S...', 64, Array)
+#2 /Users/Uesato/Sites/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Users/Uesato/S...', 64, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-08-26 15:57:11 Error: Fatal Error (1): Call to a member function render() on null in [/Users/Uesato/Sites/app/View/Layouts/default.ctp, line 45]
+2015-08-26 15:57:11 Error: [FatalErrorException] Call to a member function render() on null
+Request URL: /users/add
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Users/Uesato/S...', 45)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Users/Uesato/S...', 45, Array)
+#2 /Users/Uesato/Sites/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Users/Uesato/S...', 45, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

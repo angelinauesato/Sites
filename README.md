@@ -1,3 +1,10 @@
+#iStock Blog - Sample
+This blog web app is developed with CakePHP in order to show as a first impression of my skills as PHP developer.
+##Language: PHP
+##Framework: CakePHP
+##Database: MySQL
+##Repository: GitHub.com
+
 # CakePHP
 
 [![Latest Stable Version](https://poser.pugx.org/cakephp/cakephp/v/stable.svg)](https://packagist.org/packages/cakephp/cakephp)

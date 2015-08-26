@@ -4,8 +4,6 @@
 <br />
 <br/>
 <?php  echo $this->Session->flash();
-
-  
 ?>
 
   <h1> Topics</h1>

@@ -4,6 +4,11 @@
   
     var $components =  array('Session');
     
+    public function beforeFilter(){
+      
+      $this->Auth->allow('index');
+    }
+    
     public function index(){
       
       $this->set('blog', 'iSotck Sample');
