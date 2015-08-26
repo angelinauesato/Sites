@@ -1,3 +1,4 @@
+<title>Topics - iStock </title>
 <?php
   echo $blog;
   echo $this->Session->flash();
