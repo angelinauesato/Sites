@@ -1,7 +1,9 @@
 <title>Topics - iStock </title>
 <?php
-  echo $blog;
-  echo $this->Session->flash();
+  echo $blog; ?>
+<br />
+<br/>
+<?php  echo $this->Session->flash();
 
   
 ?>
@@ -27,4 +29,7 @@
       </tr>
       <?php endforeach; ?>
   </table>
+  <br />
+  <?php echo $this->HTML->link('Create a new topic', array('controller' => 'topics', 'action' => 'add')); ?>
+
   <?php unset($topic); ?>
