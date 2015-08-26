@@ -159,3 +159,36 @@ Stack Trace:
 #8 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TopicsController), Object(CakeRequest))
 #9 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #10 {main}
+2015-08-26 09:13:12 Error: [MissingActionException] Action TopicsController::view() could not be found.
+Exception Attributes: array (
+  'controller' => 'TopicsController',
+  'action' => 'view',
+)
+Request URL: /topics/view/1
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TopicsController), Object(CakeRequest))
+#2 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-26 09:38:44 Error: [MissingViewException] View file "Topics/edit.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Topics/edit.ctp',
+)
+Request URL: /topics/edit/1
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /Users/Uesato/Sites/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TopicsController), Object(CakeRequest))
+#4 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-26 10:09:35 Error: Fatal Error (4): syntax error, unexpected '?>', expecting function (T_FUNCTION) in [/Users/Uesato/Sites/app/Controller/TopicsController.php, line 59]
+2015-08-26 10:09:35 Error: [FatalErrorException] syntax error, unexpected '?>', expecting function (T_FUNCTION)
+Request URL: /topics/index
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Users/Uesato/S...', 59)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Users/Uesato/S...', 59, Array)
+#2 /Users/Uesato/Sites/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Users/Uesato/S...', 59, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
