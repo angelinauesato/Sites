@@ -1,0 +1,161 @@
+2015-08-25 22:58:14 Error: [MissingControllerException] Controller class SitesController could not be found.
+Exception Attributes: array (
+  'class' => 'SitesController',
+  'plugin' => NULL,
+)
+Request URL: /Sites
+Stack Trace:
+#0 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-25 23:03:57 Error: [MissingComponentException] Component class ToolbarComponent could not be found.
+Exception Attributes: array (
+  'class' => 'ToolbarComponent',
+  'plugin' => 'DebugKit',
+)
+Request URL: /
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Controller/ComponentCollection.php(53): ComponentCollection->load('DebugKit.Toolba...', Array)
+#1 /Users/Uesato/Sites/lib/Cake/Controller/Controller.php(643): ComponentCollection->init(Object(PagesController))
+#2 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(188): Controller->constructClasses()
+#3 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#4 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-25 23:09:14 Error: [MissingComponentException] Component class ToolbarComponent could not be found.
+Exception Attributes: array (
+  'class' => 'ToolbarComponent',
+  'plugin' => 'DebugKit',
+)
+Request URL: /
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Controller/ComponentCollection.php(53): ComponentCollection->load('DebugKit.Toolba...', Array)
+#1 /Users/Uesato/Sites/lib/Cake/Controller/Controller.php(643): ComponentCollection->init(Object(PagesController))
+#2 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(188): Controller->constructClasses()
+#3 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#4 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-25 23:11:59 Error: [MissingComponentException] Component class ToolbarComponent could not be found.
+Exception Attributes: array (
+  'class' => 'ToolbarComponent',
+  'plugin' => 'DebugKit',
+)
+Request URL: /
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Controller/ComponentCollection.php(53): ComponentCollection->load('DebugKit.Toolba...', Array)
+#1 /Users/Uesato/Sites/lib/Cake/Controller/Controller.php(643): ComponentCollection->init(Object(PagesController))
+#2 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(188): Controller->constructClasses()
+#3 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#4 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-25 23:14:33 Error: [MissingComponentException] Component class ToolbarComponent could not be found.
+Exception Attributes: array (
+  'class' => 'ToolbarComponent',
+  'plugin' => 'DebugKit',
+)
+Request URL: /
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Controller/ComponentCollection.php(53): ComponentCollection->load('DebugKit.Toolba...', Array)
+#1 /Users/Uesato/Sites/lib/Cake/Controller/Controller.php(643): ComponentCollection->init(Object(PagesController))
+#2 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(188): Controller->constructClasses()
+#3 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#4 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-25 23:14:36 Error: [MissingComponentException] Component class ToolbarComponent could not be found.
+Exception Attributes: array (
+  'class' => 'ToolbarComponent',
+  'plugin' => 'DebugKit',
+)
+Request URL: /
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Controller/ComponentCollection.php(53): ComponentCollection->load('DebugKit.Toolba...', Array)
+#1 /Users/Uesato/Sites/lib/Cake/Controller/Controller.php(643): ComponentCollection->init(Object(PagesController))
+#2 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(188): Controller->constructClasses()
+#3 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#4 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-25 23:18:56 Error: [MissingComponentException] Component class ToolbarComponent could not be found.
+Exception Attributes: array (
+  'class' => 'ToolbarComponent',
+  'plugin' => 'DebugKit',
+)
+Request URL: /
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Controller/ComponentCollection.php(53): ComponentCollection->load('DebugKit.Toolba...', Array)
+#1 /Users/Uesato/Sites/lib/Cake/Controller/Controller.php(643): ComponentCollection->init(Object(PagesController))
+#2 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(188): Controller->constructClasses()
+#3 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#4 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-25 23:28:05 Error: [MissingComponentException] Component class ToolbarComponent could not be found.
+Exception Attributes: array (
+  'class' => 'ToolbarComponent',
+  'plugin' => 'DebugKit',
+)
+Request URL: /
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Controller/ComponentCollection.php(53): ComponentCollection->load('DebugKit.Toolba...', Array)
+#1 /Users/Uesato/Sites/lib/Cake/Controller/Controller.php(643): ComponentCollection->init(Object(PagesController))
+#2 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(188): Controller->constructClasses()
+#3 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#4 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-25 23:29:49 Error: [MissingComponentException] Component class ToolbarComponent could not be found.
+Exception Attributes: array (
+  'class' => 'ToolbarComponent',
+  'plugin' => 'DebugKit',
+)
+Request URL: /
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Controller/ComponentCollection.php(53): ComponentCollection->load('DebugKit.Toolba...', Array)
+#1 /Users/Uesato/Sites/lib/Cake/Controller/Controller.php(643): ComponentCollection->init(Object(PagesController))
+#2 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(188): Controller->constructClasses()
+#3 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#4 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-26 07:29:14 Error: Fatal Error (1): Call to a member function set() on null in [/Users/Uesato/Sites/app/Controller/TopicsController.php, line 17]
+2015-08-26 07:29:14 Error: [FatalErrorException] Call to a member function set() on null
+Request URL: /topics/add
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Users/Uesato/S...', 17)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Users/Uesato/S...', 17, Array)
+#2 /Users/Uesato/Sites/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Users/Uesato/S...', 17, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-08-26 07:29:39 Error: Fatal Error (1): Call to a member function set() on null in [/Users/Uesato/Sites/app/Controller/TopicsController.php, line 17]
+2015-08-26 07:29:39 Error: [FatalErrorException] Call to a member function set() on null
+Request URL: /topics/add
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Users/Uesato/S...', 17)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Users/Uesato/S...', 17, Array)
+#2 /Users/Uesato/Sites/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Users/Uesato/S...', 17, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-08-26 07:32:08 Error: Fatal Error (1): Call to a member function set() on null in [/Users/Uesato/Sites/app/Controller/TopicsController.php, line 17]
+2015-08-26 07:32:08 Error: [FatalErrorException] Call to a member function set() on null
+Request URL: /topics/add
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Users/Uesato/S...', 17)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Users/Uesato/S...', 17, Array)
+#2 /Users/Uesato/Sites/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Users/Uesato/S...', 17, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-08-26 07:48:52 Error: [MissingHelperException] Helper class blogHelper could not be found.
+Exception Attributes: array (
+  'class' => 'blogHelper',
+  'plugin' => false,
+)
+Request URL: /topics/index
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('blog')
+#1 /Users/Uesato/Sites/lib/Cake/View/View.php(858): HelperCollection->__isset('blog')
+#2 /Users/Uesato/Sites/app/View/Topics/index.ctp(2): View->__get('blog')
+#3 /Users/Uesato/Sites/lib/Cake/View/View.php(971): include('/Users/Uesato/S...')
+#4 /Users/Uesato/Sites/lib/Cake/View/View.php(933): View->_evaluate('/Users/Uesato/S...', Array)
+#5 /Users/Uesato/Sites/lib/Cake/View/View.php(473): View->_render('/Users/Uesato/S...')
+#6 /Users/Uesato/Sites/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#7 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#8 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TopicsController), Object(CakeRequest))
+#9 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
