@@ -25,17 +25,23 @@ class UsersController extends AppController {
 		$this->set('users', $this->Paginator->paginate());
 	}
 
-    public function beforeFilter(){
-      
-      $this->Auth->allow('add');
+    public function beforeFilter() {
+        parent::beforeFilter();
+        $this->Auth->allow('add', 'logout');
     }
-	
-	public function login(){
-		
-	}
+
+
+public function login() {
+    if ($this->request->is('post')) {
+        if ($this->Auth->login()) {
+            return $this->redirect($this->Auth->redirectUrl());
+        }
+        $this->Session->setFlash(__('Invalid username or password, try again'));
+    }
+}
 	
 	public function logout(){
-		
+		return $this->redirect($this->Auth->logout());
 	}
 /**
  * view method
@@ -45,12 +51,12 @@ class UsersController extends AppController {
  * @return void
  */
 	public function view($id = null) {
-		if (!$this->User->exists($id)) {
-			throw new NotFoundException(__('Invalid user'));
-		}
-		$options = array('conditions' => array('User.' . $this->User->primaryKey => $id));
-		$this->set('user', $this->User->find('first', $options));
-	}
+        $this->User->id = $id;
+        if (!$this->User->exists()) {
+            throw new NotFoundException(__('Invalid user'));
+        }
+        $this->set('user', $this->User->findById($id));
+    }
 
 /**
  * add method
@@ -58,17 +64,17 @@ class UsersController extends AppController {
  * @return void
  */
 	public function add() {
-		if ($this->request->is('post')) {
-			$this->User->create();
-			$this->request->data['User']['password'] = AuthComponent::password($this->request->data['User']['password']);
-			if ($this->User->save($this->request->data)) {
-				$this->Session->setFlash('The user has been saved.');
-				return $this->redirect(array('action' => 'index'));
-			} else {
-				$this->Flash->setFlash(('The user could not be saved. Please, try again.'));
-			}
-		}
-	}
+        if ($this->request->is('post')) {
+            $this->User->create();
+            if ($this->User->save($this->request->data)) {
+                $this->Session->setFlash(__('The user has been saved'));
+                return $this->redirect(array('action' => 'index'));
+            }
+            $this->Session->setFlash(
+                __('The user could not be saved. Please, try again.')
+            );
+        }
+    }
 
 /**
  * edit method
@@ -78,21 +84,23 @@ class UsersController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
-		if (!$this->User->exists($id)) {
-			throw new NotFoundException(__('Invalid user'));
-		}
-		if ($this->request->is(array('post', 'put'))) {
-			if ($this->User->save($this->request->data)) {
-				$this->Flash->success(__('The user has been saved.'));
-				return $this->redirect(array('action' => 'index'));
-			} else {
-				$this->Flash->error(__('The user could not be saved. Please, try again.'));
-			}
-		} else {
-			$options = array('conditions' => array('User.' . $this->User->primaryKey => $id));
-			$this->request->data = $this->User->find('first', $options);
-		}
-	}
+        $this->User->id = $id;
+        if (!$this->User->exists()) {
+            throw new NotFoundException(__('Invalid user'));
+        }
+        if ($this->request->is('post') || $this->request->is('put')) {
+            if ($this->User->save($this->request->data)) {
+                $this->Session->setFlash(__('The user has been saved'));
+                return $this->redirect(array('action' => 'index'));
+            }
+            $this->Session->setFlash(
+                __('The user could not be saved. Please, try again.')
+            );
+        } else {
+            $this->request->data = $this->User->findById($id);
+            unset($this->request->data['User']['password']);
+        }
+    }
 
 /**
  * delete method
