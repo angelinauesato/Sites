@@ -41,7 +41,8 @@ public function login() {
 }
 	
 	public function logout(){
-		return $this->redirect($this->Auth->logout());
+		$this->Auth->logout();
+		return $this->redirect('/topics/index');
 	}
 /**
  * view method
@@ -66,7 +67,7 @@ public function login() {
 	public function add() {
         if ($this->request->is('post')) {
             $this->User->create();
-            if ($this->User->save($this->request->data)) {
+			if ($this->User->save($this->request->data)) {
                 $this->Session->setFlash(__('The user has been saved'));
                 return $this->redirect(array('action' => 'index'));
             }

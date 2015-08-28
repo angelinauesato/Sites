@@ -8,6 +8,7 @@
   <table>
       <th>User ID</th>
       <th>Topic ID</th>
+      <th>Title</th>
       <th>Body</th>
       <th>Created</th>
       <th>Modified</th>
@@ -17,6 +18,7 @@
       <tr>
         <td><?php echo $this->HTML->link($post['Post']['id'], array('controller' => 'posts', 'action' => 'view', $post['Post']['id'])); ?></td>
         <td><?php echo $this->HTML->link($post['Topic']['title'], array('controller' => 'posts', 'action' => 'view', $post['Post']['id'])); ?></td>
+        <td><?php echo $post['Post']['title']; ?></td>
         <td><?php echo $post['Post']['body']; ?></td>
         <td><?php echo $post['Post']['created']; ?></td>
         <td><?php echo $post['Post']['modified']; ?></td>

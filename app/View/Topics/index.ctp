@@ -5,7 +5,17 @@
 <br/>
 <?php  echo $this->Session->flash();
 ?>
+<br />
 
+  <?php
+    if(AuthComponent::user()){
+      echo $this->HTML->link('Logout', array('controller' => 'users', 'action' => 'logout'));
+    }else{
+      echo $this->HTML->link('Login', array('controller' => 'users', 'action' => 'login'));
+    }
+  ?>
+  <?php  ?>
+<br />
   <h1> Topics</h1>
   <table>
       <th>Title</th>

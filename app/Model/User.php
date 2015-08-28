@@ -19,7 +19,7 @@ class User extends AppModel {
         'username' => array(
             'required' => array(
                 'rule' => 'notBlank',
-                'message' => 'A username is required'
+                'message' => 'An username is required'
             )
         ),
         'password' => array(
@@ -28,10 +28,10 @@ class User extends AppModel {
                 'message' => 'A password is required'
             )
         ),
-        'role' => array(
+        'full_name' => array(
             'valid' => array(
-                'rule' => array('inList', array('admin', 'author')),
-                'message' => 'Please enter a valid role',
+                'rule' => 'notBlank',
+                'message' => 'A fullname is required',
                 'allowEmpty' => false
             )
         )
