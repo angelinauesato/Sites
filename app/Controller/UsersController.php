@@ -21,7 +21,8 @@ class UsersController extends AppController {
  * @return void
  */
 	public function index() {
-		if(AuthComponent::user('role') == '1'){
+		print_r(AuthComponent::user());
+		if(AuthComponent::user('role') == '1' or !(AuthComponent::user())){
 		    $this->redirect(array('controller' => 'topics', 'action' => 'index'));
 		}
 		$this->User->recursive = 0;
