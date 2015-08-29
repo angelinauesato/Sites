@@ -21,6 +21,10 @@
       if($this->request->is('post')){
         
         $this->Topic->create();
+        if(AuthComponent::user('role') == 1){
+          $this->request->data['Topic']['visible'] = 0;
+        }
+        $this->request->data['Topic']['user_id'] = AuthComponent::user('id');
         if($this->Topic->save($this->request->data)){
           $this->Session->setFlash( 'The Topic has been created!');
           
@@ -35,6 +39,10 @@
     }
     
     public function edit($id){
+      
+      if(AuthComponent::user('role') == '1'){
+        $this->redirect('index');
+      }
       $data = $this->Topic->findById($id);
       if($this->request->is(array('post', 'put'))){
         
@@ -51,6 +59,9 @@
     
     public function delete($id){
       
+      if(AuthComponent::user('role') == '1'){
+        $this->redirect('index');
+      }
       $this->Topic->id = $id;
       if($this->request->is(array('post', 'put'))){
         

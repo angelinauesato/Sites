@@ -21,6 +21,9 @@ class UsersController extends AppController {
  * @return void
  */
 	public function index() {
+		if(AuthComponent::user('role') == '1'){
+		    $this->redirect(array('controller' => 'topics', 'action' => 'index'));
+		}
 		$this->User->recursive = 0;
 		$this->set('users', $this->Paginator->paginate());
 	}
@@ -52,6 +55,11 @@ public function login() {
  * @return void
  */
 	public function view($id = null) {
+		
+		if(AuthComponent::user('role') == '1'){
+		    $this->redirect(array('controller' => 'topics', 'action' => 'index'));
+		}
+		
         $this->User->id = $id;
         if (!$this->User->exists()) {
             throw new NotFoundException(__('Invalid user'));
@@ -65,6 +73,11 @@ public function login() {
  * @return void
  */
 	public function add() {
+		
+		if(AuthComponent::user('role') == '1'){
+		    $this->redirect(array('controller' => 'topics', 'action' => 'index'));
+		}
+		
         if ($this->request->is('post')) {
             $this->User->create();
 			if ($this->User->save($this->request->data)) {
@@ -85,6 +98,11 @@ public function login() {
  * @return void
  */
 	public function edit($id = null) {
+		
+		if(AuthComponent::user('role') == '1'){
+		    $this->redirect(array('controller' => 'topics', 'action' => 'index'));
+		}
+		
         $this->User->id = $id;
         if (!$this->User->exists()) {
             throw new NotFoundException(__('Invalid user'));
@@ -111,6 +129,11 @@ public function login() {
  * @return void
  */
 	public function delete($id = null) {
+		
+		if(AuthComponent::user('role') == '1'){
+		    $this->redirect(array('controller' => 'topics', 'action' => 'index'));
+		}
+		
 		$this->User->id = $id;
 		if (!$this->User->exists()) {
 			throw new NotFoundException(__('Invalid user'));
@@ -122,5 +145,10 @@ public function login() {
 			$this->Flash->error(__('The user could not be deleted. Please, try again.'));
 		}
 		return $this->redirect(array('action' => 'index'));
+	}
+	
+	public function getUsernameById($id){
+		$data = $this->User->findById($id);
+		return $data;
 	}
 }

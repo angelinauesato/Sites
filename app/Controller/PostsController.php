@@ -16,10 +16,11 @@
                 
                 $this->Post->create();
                 $this->request->data['Post']['topic_id'] = $id;
+                 $this->request->data['Post']['user_id'] = AuthComponent::user('id');
                 if($this->Post->save($this->request->data)){
                   $this->Session->setFlash( 'The Post has been created!');
                       
-                  $this->redirect('index');
+                  $this->redirect('/topics/view/'.$id);
                 }
             }
             

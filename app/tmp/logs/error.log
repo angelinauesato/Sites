@@ -370,3 +370,15 @@ Stack Trace:
 #14 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
 #15 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #16 {main}
+2015-08-29 19:18:35 Error: [MissingViewException] View file "Topics/delete.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Topics/delete.ctp',
+)
+Request URL: /topics/delete/10
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /Users/Uesato/Sites/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TopicsController), Object(CakeRequest))
+#4 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}

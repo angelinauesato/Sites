@@ -1,6 +1,6 @@
 <h1><b><?php
 
- echo $post['Post']['Title']; ?>
+ echo $post['Post']['title']; ?>
  </b>
  <?php
  echo $post['Post']['body'];

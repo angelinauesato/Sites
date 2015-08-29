@@ -3,7 +3,10 @@
   echo $this->Form->create('Topic');
   //echo $this->Form->input('user_id');
   echo $this->Form->input('title');
-  echo $this->Form->input('visible');
+    if (AuthComponent::user('role') == '2') : 
+  echo $this->Form->select('visible', array('1' => 'Published', '0' => 'Hidden'),
+                           array('empty' => false));
+  endif;
   echo $this->Form->end('Save topic');
   
 ?>
