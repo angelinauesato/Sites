@@ -1,5 +1,7 @@
 <?php
 App::uses('AppController', 'Controller');
+
+ App::uses('String', 'Utility');
 /**
  * Users Controller
  *
@@ -22,7 +24,7 @@ class UsersController extends AppController {
  */
 	public function index() {
 		if(!AuthComponent::user()){
-		    $this->redirect(array('controller' => 'topics', 'action' => 'index'));
+		    $this->redirect(array('controller' => 'pages', 'action' => 'index'));
 		}
 		$this->User->recursive = 0;
 		$this->set('users', $this->Paginator->paginate());
@@ -161,5 +163,13 @@ public function login() {
 			return 'Author';
 		}
 		
+	}
+	
+	public function findUsersByRole($role){
+		
+		$data = $this->User->find( 'all' , array(
+        'conditions' => array('User.role ' => $role)
+    ));
+		return $data;
 	}
 }

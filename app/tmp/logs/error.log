@@ -434,3 +434,425 @@ Stack Trace:
 #3 /Users/Uesato/Sites/lib/Cake/Core/App.php(906): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2015-08-30 23:11:36 Error: [MissingControllerException] Controller class Docs-assetsController could not be found.
+Exception Attributes: array (
+  'class' => 'Docs-assetsController',
+  'plugin' => NULL,
+)
+Request URL: /docs-assets/ico/favicon.png
+Stack Trace:
+#0 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-30 23:40:31 Error: Fatal Error (1): Class 'UsersController' not found in [/Users/Uesato/Sites/app/View/Pages/index.ctp, line 46]
+2015-08-30 23:40:31 Error: [FatalErrorException] Class 'UsersController' not found
+Request URL: /
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Class 'UsersCon...', '/Users/Uesato/S...', 46)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'UsersCon...', '/Users/Uesato/S...', 46, Array)
+#2 /Users/Uesato/Sites/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Class 'UsersCon...', '/Users/Uesato/S...', 46, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-08-30 23:41:14 Error: Fatal Error (1): Call to undefined method UsersController::find() in [/Users/Uesato/Sites/app/Controller/UsersController.php, line 167]
+2015-08-30 23:41:14 Error: [FatalErrorException] Call to undefined method UsersController::find()
+Request URL: /
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Users/Uesato/S...', 167)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Users/Uesato/S...', 167, Array)
+#2 /Users/Uesato/Sites/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Users/Uesato/S...', 167, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-08-30 23:52:35 Error: Fatal Error (1): Call to undefined function truncate() in [/Users/Uesato/Sites/app/View/Pages/index.ctp, line 35]
+2015-08-30 23:52:35 Error: [FatalErrorException] Call to undefined function truncate()
+Request URL: /
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Users/Uesato/S...', 35)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Users/Uesato/S...', 35, Array)
+#2 /Users/Uesato/Sites/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Users/Uesato/S...', 35, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-08-30 23:53:01 Error: Fatal Error (1): Class 'String' not found in [/Users/Uesato/Sites/app/View/Pages/index.ctp, line 35]
+2015-08-30 23:53:01 Error: [FatalErrorException] Class 'String' not found
+Request URL: /
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Class 'String' ...', '/Users/Uesato/S...', 35)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'String' ...', '/Users/Uesato/S...', 35, Array)
+#2 /Users/Uesato/Sites/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Class 'String' ...', '/Users/Uesato/S...', 35, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-08-30 23:54:50 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== '3'' at line 1
+Request URL: /
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(669): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(1114): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /Users/Uesato/Sites/lib/Cake/Model/Model.php(3026): DboSource->read(Object(User), Array)
+#5 /Users/Uesato/Sites/lib/Cake/Model/Model.php(2998): Model->_readDataSource('all', Array)
+#6 /Users/Uesato/Sites/app/Controller/UsersController.php(168): Model->find('all', Array)
+#7 /Users/Uesato/Sites/app/View/Pages/index.ctp(36): UsersController->findUsersByRole('3')
+#8 /Users/Uesato/Sites/lib/Cake/View/View.php(971): include('/Users/Uesato/S...')
+#9 /Users/Uesato/Sites/lib/Cake/View/View.php(933): View->_evaluate('/Users/Uesato/S...', Array)
+#10 /Users/Uesato/Sites/lib/Cake/View/View.php(473): View->_render('/Users/Uesato/S...')
+#11 /Users/Uesato/Sites/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#12 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#13 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#14 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2015-08-30 23:55:18 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== '3'' at line 1
+Request URL: /
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(669): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(1114): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /Users/Uesato/Sites/lib/Cake/Model/Model.php(3026): DboSource->read(Object(User), Array)
+#5 /Users/Uesato/Sites/lib/Cake/Model/Model.php(2998): Model->_readDataSource('all', Array)
+#6 /Users/Uesato/Sites/app/Controller/UsersController.php(168): Model->find('all', Array)
+#7 /Users/Uesato/Sites/app/View/Pages/index.ctp(36): UsersController->findUsersByRole(3)
+#8 /Users/Uesato/Sites/lib/Cake/View/View.php(971): include('/Users/Uesato/S...')
+#9 /Users/Uesato/Sites/lib/Cake/View/View.php(933): View->_evaluate('/Users/Uesato/S...', Array)
+#10 /Users/Uesato/Sites/lib/Cake/View/View.php(473): View->_render('/Users/Uesato/S...')
+#11 /Users/Uesato/Sites/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#12 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#13 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#14 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2015-08-30 23:59:35 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== '\'3\''' at line 1
+Request URL: /
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(669): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(1114): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /Users/Uesato/Sites/lib/Cake/Model/Model.php(3026): DboSource->read(Object(User), Array)
+#5 /Users/Uesato/Sites/lib/Cake/Model/Model.php(2998): Model->_readDataSource('all', Array)
+#6 /Users/Uesato/Sites/app/Controller/UsersController.php(169): Model->find('all', Array)
+#7 /Users/Uesato/Sites/app/View/Pages/index.ctp(36): UsersController->findUsersByRole(3)
+#8 /Users/Uesato/Sites/lib/Cake/View/View.php(971): include('/Users/Uesato/S...')
+#9 /Users/Uesato/Sites/lib/Cake/View/View.php(933): View->_evaluate('/Users/Uesato/S...', Array)
+#10 /Users/Uesato/Sites/lib/Cake/View/View.php(473): View->_render('/Users/Uesato/S...')
+#11 /Users/Uesato/Sites/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#12 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#13 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#14 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2015-08-30 23:59:55 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== '\\\'3\\\''' at line 1
+Request URL: /
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(669): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(1114): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /Users/Uesato/Sites/lib/Cake/Model/Model.php(3026): DboSource->read(Object(User), Array)
+#5 /Users/Uesato/Sites/lib/Cake/Model/Model.php(2998): Model->_readDataSource('all', Array)
+#6 /Users/Uesato/Sites/app/Controller/UsersController.php(169): Model->find('all', Array)
+#7 /Users/Uesato/Sites/app/View/Pages/index.ctp(36): UsersController->findUsersByRole(3)
+#8 /Users/Uesato/Sites/lib/Cake/View/View.php(971): include('/Users/Uesato/S...')
+#9 /Users/Uesato/Sites/lib/Cake/View/View.php(933): View->_evaluate('/Users/Uesato/S...', Array)
+#10 /Users/Uesato/Sites/lib/Cake/View/View.php(473): View->_render('/Users/Uesato/S...')
+#11 /Users/Uesato/Sites/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#12 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#13 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#14 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2015-08-31 00:00:36 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== '\'3\''' at line 1
+Request URL: /
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(669): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(1114): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /Users/Uesato/Sites/lib/Cake/Model/Model.php(3026): DboSource->read(Object(User), Array)
+#5 /Users/Uesato/Sites/lib/Cake/Model/Model.php(2998): Model->_readDataSource('all', Array)
+#6 /Users/Uesato/Sites/app/Controller/UsersController.php(169): Model->find('all', Array)
+#7 /Users/Uesato/Sites/app/View/Pages/index.ctp(36): UsersController->findUsersByRole(3)
+#8 /Users/Uesato/Sites/lib/Cake/View/View.php(971): include('/Users/Uesato/S...')
+#9 /Users/Uesato/Sites/lib/Cake/View/View.php(933): View->_evaluate('/Users/Uesato/S...', Array)
+#10 /Users/Uesato/Sites/lib/Cake/View/View.php(473): View->_render('/Users/Uesato/S...')
+#11 /Users/Uesato/Sites/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#12 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#13 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#14 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2015-08-31 00:00:51 Error: Fatal Error (4): syntax error, unexpected 'all' (T_STRING) in [/Users/Uesato/Sites/app/Controller/UsersController.php, line 168]
+2015-08-31 00:00:51 Error: [FatalErrorException] syntax error, unexpected 'all' (T_STRING)
+Request URL: /
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Users/Uesato/S...', 168)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Users/Uesato/S...', 168, Array)
+#2 /Users/Uesato/Sites/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Users/Uesato/S...', 168, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-08-31 00:01:11 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== '\'3\\\"'' at line 1
+Request URL: /
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(669): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(1114): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /Users/Uesato/Sites/lib/Cake/Model/Model.php(3026): DboSource->read(Object(User), Array)
+#5 /Users/Uesato/Sites/lib/Cake/Model/Model.php(2998): Model->_readDataSource('all', Array)
+#6 /Users/Uesato/Sites/app/Controller/UsersController.php(169): Model->find('all', Array)
+#7 /Users/Uesato/Sites/app/View/Pages/index.ctp(36): UsersController->findUsersByRole(3)
+#8 /Users/Uesato/Sites/lib/Cake/View/View.php(971): include('/Users/Uesato/S...')
+#9 /Users/Uesato/Sites/lib/Cake/View/View.php(933): View->_evaluate('/Users/Uesato/S...', Array)
+#10 /Users/Uesato/Sites/lib/Cake/View/View.php(473): View->_render('/Users/Uesato/S...')
+#11 /Users/Uesato/Sites/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#12 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#13 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#14 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2015-08-31 00:06:49 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== '3'' at line 1
+Request URL: /
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(669): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(1114): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /Users/Uesato/Sites/lib/Cake/Model/Model.php(3026): DboSource->read(Object(User), Array)
+#5 /Users/Uesato/Sites/lib/Cake/Model/Model.php(2998): Model->_readDataSource('all', Array)
+#6 /Users/Uesato/Sites/app/Controller/UsersController.php(170): Model->find('all', Array)
+#7 /Users/Uesato/Sites/app/View/Pages/index.ctp(36): UsersController->findUsersByRole(3)
+#8 /Users/Uesato/Sites/lib/Cake/View/View.php(971): include('/Users/Uesato/S...')
+#9 /Users/Uesato/Sites/lib/Cake/View/View.php(933): View->_evaluate('/Users/Uesato/S...', Array)
+#10 /Users/Uesato/Sites/lib/Cake/View/View.php(473): View->_render('/Users/Uesato/S...')
+#11 /Users/Uesato/Sites/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#12 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#13 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#14 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2015-08-31 00:09:43 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== '\'3\''' at line 1
+Request URL: /
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(669): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(1114): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /Users/Uesato/Sites/lib/Cake/Model/Model.php(3026): DboSource->read(Object(User), Array)
+#5 /Users/Uesato/Sites/lib/Cake/Model/Model.php(2998): Model->_readDataSource('all', Array)
+#6 /Users/Uesato/Sites/app/Controller/UsersController.php(171): Model->find('all', Array)
+#7 /Users/Uesato/Sites/app/View/Pages/index.ctp(36): UsersController->findUsersByRole(3)
+#8 /Users/Uesato/Sites/lib/Cake/View/View.php(971): include('/Users/Uesato/S...')
+#9 /Users/Uesato/Sites/lib/Cake/View/View.php(933): View->_evaluate('/Users/Uesato/S...', Array)
+#10 /Users/Uesato/Sites/lib/Cake/View/View.php(473): View->_render('/Users/Uesato/S...')
+#11 /Users/Uesato/Sites/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#12 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#13 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#14 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2015-08-31 00:10:53 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== '' AND  . $role .' at line 1
+Request URL: /
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(669): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(1114): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /Users/Uesato/Sites/lib/Cake/Model/Model.php(3026): DboSource->read(Object(User), Array)
+#5 /Users/Uesato/Sites/lib/Cake/Model/Model.php(2998): Model->_readDataSource('all', Array)
+#6 /Users/Uesato/Sites/app/Controller/UsersController.php(171): Model->find('all', Array)
+#7 /Users/Uesato/Sites/app/View/Pages/index.ctp(36): UsersController->findUsersByRole(3)
+#8 /Users/Uesato/Sites/lib/Cake/View/View.php(971): include('/Users/Uesato/S...')
+#9 /Users/Uesato/Sites/lib/Cake/View/View.php(933): View->_evaluate('/Users/Uesato/S...', Array)
+#10 /Users/Uesato/Sites/lib/Cake/View/View.php(473): View->_render('/Users/Uesato/S...')
+#11 /Users/Uesato/Sites/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#12 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#13 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#14 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2015-08-31 00:11:07 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== '%s' AND 3' at line 1
+Request URL: /
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(669): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(1114): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /Users/Uesato/Sites/lib/Cake/Model/Model.php(3026): DboSource->read(Object(User), Array)
+#5 /Users/Uesato/Sites/lib/Cake/Model/Model.php(2998): Model->_readDataSource('all', Array)
+#6 /Users/Uesato/Sites/app/Controller/UsersController.php(171): Model->find('all', Array)
+#7 /Users/Uesato/Sites/app/View/Pages/index.ctp(36): UsersController->findUsersByRole(3)
+#8 /Users/Uesato/Sites/lib/Cake/View/View.php(971): include('/Users/Uesato/S...')
+#9 /Users/Uesato/Sites/lib/Cake/View/View.php(933): View->_evaluate('/Users/Uesato/S...', Array)
+#10 /Users/Uesato/Sites/lib/Cake/View/View.php(473): View->_render('/Users/Uesato/S...')
+#11 /Users/Uesato/Sites/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#12 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#13 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#14 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2015-08-31 00:13:04 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== '%s' AND 3' at line 1
+Request URL: /
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(669): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(1114): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /Users/Uesato/Sites/lib/Cake/Model/Model.php(3026): DboSource->read(Object(User), Array)
+#5 /Users/Uesato/Sites/lib/Cake/Model/Model.php(2998): Model->_readDataSource('all', Array)
+#6 /Users/Uesato/Sites/app/Controller/UsersController.php(171): Model->find('all', Array)
+#7 /Users/Uesato/Sites/app/View/Pages/index.ctp(36): UsersController->findUsersByRole(3)
+#8 /Users/Uesato/Sites/lib/Cake/View/View.php(971): include('/Users/Uesato/S...')
+#9 /Users/Uesato/Sites/lib/Cake/View/View.php(933): View->_evaluate('/Users/Uesato/S...', Array)
+#10 /Users/Uesato/Sites/lib/Cake/View/View.php(473): View->_render('/Users/Uesato/S...')
+#11 /Users/Uesato/Sites/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#12 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#13 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#14 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2015-08-31 00:13:55 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== AND 3' at line 1
+Request URL: /
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(669): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(1114): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /Users/Uesato/Sites/lib/Cake/Model/Model.php(3026): DboSource->read(Object(User), Array)
+#5 /Users/Uesato/Sites/lib/Cake/Model/Model.php(2998): Model->_readDataSource('all', Array)
+#6 /Users/Uesato/Sites/app/Controller/UsersController.php(171): Model->find('all', Array)
+#7 /Users/Uesato/Sites/app/View/Pages/index.ctp(36): UsersController->findUsersByRole(3)
+#8 /Users/Uesato/Sites/lib/Cake/View/View.php(971): include('/Users/Uesato/S...')
+#9 /Users/Uesato/Sites/lib/Cake/View/View.php(933): View->_evaluate('/Users/Uesato/S...', Array)
+#10 /Users/Uesato/Sites/lib/Cake/View/View.php(473): View->_render('/Users/Uesato/S...')
+#11 /Users/Uesato/Sites/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#12 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#13 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#14 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2015-08-31 00:14:14 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== '1'' at line 1
+Request URL: /
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(669): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(1114): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /Users/Uesato/Sites/lib/Cake/Model/Model.php(3026): DboSource->read(Object(User), Array)
+#5 /Users/Uesato/Sites/lib/Cake/Model/Model.php(2998): Model->_readDataSource('all', Array)
+#6 /Users/Uesato/Sites/app/Controller/UsersController.php(171): Model->find('all', Array)
+#7 /Users/Uesato/Sites/app/View/Pages/index.ctp(36): UsersController->findUsersByRole(3)
+#8 /Users/Uesato/Sites/lib/Cake/View/View.php(971): include('/Users/Uesato/S...')
+#9 /Users/Uesato/Sites/lib/Cake/View/View.php(933): View->_evaluate('/Users/Uesato/S...', Array)
+#10 /Users/Uesato/Sites/lib/Cake/View/View.php(473): View->_render('/Users/Uesato/S...')
+#11 /Users/Uesato/Sites/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#12 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#13 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#14 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2015-08-31 00:34:42 Error: Fatal Error (1): Call to undefined method UsersController::findAllByRole() in [/Users/Uesato/Sites/app/View/Pages/index.ctp, line 36]
+2015-08-31 00:34:42 Error: [FatalErrorException] Call to undefined method UsersController::findAllByRole()
+Request URL: /
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Users/Uesato/S...', 36)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Users/Uesato/S...', 36, Array)
+#2 /Users/Uesato/Sites/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Users/Uesato/S...', 36, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-08-31 00:35:33 Error: Fatal Error (1): Call to undefined method UsersController::findByRole() in [/Users/Uesato/Sites/app/View/Pages/index.ctp, line 36]
+2015-08-31 00:35:33 Error: [FatalErrorException] Call to undefined method UsersController::findByRole()
+Request URL: /
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Users/Uesato/S...', 36)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Users/Uesato/S...', 36, Array)
+#2 /Users/Uesato/Sites/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Users/Uesato/S...', 36, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-08-31 00:37:18 Error: [MissingHelperException] Helper class UserHelper could not be found.
+Exception Attributes: array (
+  'class' => 'UserHelper',
+  'plugin' => false,
+)
+Request URL: /
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('User')
+#1 /Users/Uesato/Sites/lib/Cake/View/View.php(858): HelperCollection->__isset('User')
+#2 /Users/Uesato/Sites/app/View/Pages/index.ctp(36): View->__get('User')
+#3 /Users/Uesato/Sites/lib/Cake/View/View.php(971): include('/Users/Uesato/S...')
+#4 /Users/Uesato/Sites/lib/Cake/View/View.php(933): View->_evaluate('/Users/Uesato/S...', Array)
+#5 /Users/Uesato/Sites/lib/Cake/View/View.php(473): View->_render('/Users/Uesato/S...')
+#6 /Users/Uesato/Sites/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#7 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#8 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#9 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2015-08-31 00:40:43 Error: Fatal Error (1): Call to undefined method UsersController::query() in [/Users/Uesato/Sites/app/View/Pages/index.ctp, line 36]
+2015-08-31 00:40:43 Error: [FatalErrorException] Call to undefined method UsersController::query()
+Request URL: /
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Users/Uesato/S...', 36)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Users/Uesato/S...', 36, Array)
+#2 /Users/Uesato/Sites/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Users/Uesato/S...', 36, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-08-31 00:56:51 Error: [MissingHelperException] Helper class UserHelper could not be found.
+Exception Attributes: array (
+  'class' => 'UserHelper',
+  'plugin' => false,
+)
+Request URL: /
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('User')
+#1 /Users/Uesato/Sites/lib/Cake/View/View.php(858): HelperCollection->__isset('User')
+#2 /Users/Uesato/Sites/app/View/Pages/index.ctp(43): View->__get('User')
+#3 /Users/Uesato/Sites/lib/Cake/View/View.php(971): include('/Users/Uesato/S...')
+#4 /Users/Uesato/Sites/lib/Cake/View/View.php(933): View->_evaluate('/Users/Uesato/S...', Array)
+#5 /Users/Uesato/Sites/lib/Cake/View/View.php(473): View->_render('/Users/Uesato/S...')
+#6 /Users/Uesato/Sites/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#7 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#8 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#9 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2015-08-31 01:23:08 Error: Fatal Error (1): Class 'TopicsController' not found in [/Users/Uesato/Sites/app/View/Pages/index.ctp, line 57]
+2015-08-31 01:23:08 Error: [FatalErrorException] Class 'TopicsController' not found
+Request URL: /
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Class 'TopicsCo...', '/Users/Uesato/S...', 57)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'TopicsCo...', '/Users/Uesato/S...', 57, Array)
+#2 /Users/Uesato/Sites/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Class 'TopicsCo...', '/Users/Uesato/S...', 57, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-08-31 01:23:16 Error: Fatal Error (1): Class 'TopicsController' not found in [/Users/Uesato/Sites/app/View/Pages/index.ctp, line 57]
+2015-08-31 01:23:16 Error: [FatalErrorException] Class 'TopicsController' not found
+Request URL: /
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Class 'TopicsCo...', '/Users/Uesato/S...', 57)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'TopicsCo...', '/Users/Uesato/S...', 57, Array)
+#2 /Users/Uesato/Sites/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Class 'TopicsCo...', '/Users/Uesato/S...', 57, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-08-31 01:23:18 Error: Fatal Error (1): Class 'TopicsController' not found in [/Users/Uesato/Sites/app/View/Pages/index.ctp, line 57]
+2015-08-31 01:23:18 Error: [FatalErrorException] Class 'TopicsController' not found
+Request URL: /
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Class 'TopicsCo...', '/Users/Uesato/S...', 57)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'TopicsCo...', '/Users/Uesato/S...', 57, Array)
+#2 /Users/Uesato/Sites/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Class 'TopicsCo...', '/Users/Uesato/S...', 57, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-08-31 01:23:42 Error: Fatal Error (1): Call to undefined method TopicsController::find() in [/Users/Uesato/Sites/app/View/Pages/index.ctp, line 58]
+2015-08-31 01:23:42 Error: [FatalErrorException] Call to undefined method TopicsController::find()
+Request URL: /
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Users/Uesato/S...', 58)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Users/Uesato/S...', 58, Array)
+#2 /Users/Uesato/Sites/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Users/Uesato/S...', 58, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-08-31 01:25:11 Error: Fatal Error (1): Call to a member function find() on null in [/Users/Uesato/Sites/app/View/Pages/index.ctp, line 58]
+2015-08-31 01:25:11 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Users/Uesato/S...', 58)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Users/Uesato/S...', 58, Array)
+#2 /Users/Uesato/Sites/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Users/Uesato/S...', 58, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
