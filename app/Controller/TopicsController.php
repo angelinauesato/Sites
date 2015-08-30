@@ -11,7 +11,6 @@
     
     public function index(){
       
-      $this->set('blog', 'iSotck Sample');
       $data = $this->Topic->find('all');
       $this->set('topics', $data);
     }

@@ -1,21 +1,8 @@
-<title>Topics - iStock </title>
-<?php
-  echo $blog; ?>
-<br />
-<br/>
 <?php  echo $this->Session->flash();
 ?>
 <br />
 
-  <?php
   
-    if(AuthComponent::user()){
-      echo $this->HTML->link('Logout', array('controller' => 'users', 'action' => 'logout'));
-    }else{
-      echo $this->HTML->link('Login', array('controller' => 'users', 'action' => 'login')) . ' or ' .
-       $this->HTML->link('Register', array('controller' => 'users', 'action' => 'add'));
-    }
-  ?>
   <?php  ?>
 <br />
   <h1> Topics</h1>
@@ -66,6 +53,10 @@
       <?php endforeach; ?>
   </table>
   <br />
-  <?php echo $this->HTML->link('Create a new topic', array('controller' => 'topics', 'action' => 'add')); ?>
+  <?php
+  if(AuthComponent::user()) {
+    echo $this->HTML->link('Create a new topic', array('controller' => 'topics', 'action' => 'add'));
+  }
+   ?>
 
   <?php unset($topic); ?>

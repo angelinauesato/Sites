@@ -1,0 +1,24 @@
+* {
+        margin: 0;
+        padding: 0;
+}
+p {
+        margin-bottom: 15px;
+}
+#tudo {
+        background: #ff0;
+        
+        padding-top: 20px;
+        
+}
+#coluna {
+        float: right;
+        width: 160px;
+        background: #f0f;
+        padding: 20px;
+}
+#conteudo {
+    
+        padding: 20px 220px 20px 20px; /* o right, é a soma do width da coluna com o padding desejado */
+        text-align: justify;
+}

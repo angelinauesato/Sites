@@ -14,8 +14,8 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
-$cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
-$cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
+$cakeDescription = __d('cake_dev', 'iStock Sample Project hehhehe');
+$cakeVersion = __d('cake_dev', 'by Angelina Uesato Oshiro')
 ?>
 <!DOCTYPE html>
 <html>
@@ -38,20 +38,49 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <body>
 	<div id="container">
 		<div id="header">
-			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
+			<h1><?php echo $cakeDescription; ?></h1>
 		</div>
+		
 		<div id="content">
-		<?php echo $this->Session->flash(); ?>
+		<?php echo $this->Session->flash();
+		?>
+			<div id="menu">
 
+		<?php
+			if(AuthComponent::user()) : {
+?>
+
+			 <?php echo $this->HTML->link('Home', array('controller' => 'topics', 'action' => 'index')); ?> |
+			 
+			 <?php echo $this->HTML->link('Posts', array('controller' => 'posts', 'action' => 'index')); ?> |
+			 
+			 <?php echo $this->HTML->link('Topics', array('controller' => 'topics', 'action' => 'index')); ?> |
+			 
+			 <?php echo $this->HTML->link('Users', array('controller' => 'users', 'action' => 'index')); ?> |
+			 
+			 <?php echo $this->HTML->link('Coments', array('controller' => 'topics', 'action' => 'index')); ?> |
+			   
+  
+<?php
+ }
+		endif;
+	?>
+	
+	<div id="in_out">
+	<?php
+    if(AuthComponent::user()){
+      echo $this->HTML->link('Logout', array('controller' => 'users', 'action' => 'logout'));
+    }else{
+      echo $this->HTML->link('Login', array('controller' => 'users', 'action' => 'login')) . ' or ' .
+       $this->HTML->link('Register', array('controller' => 'users', 'action' => 'add'));
+    }
+  ?>
+  </div>
+		</div>
 			<?php echo $this->fetch('content'); ?>
 		</div>
 		<div id="footer">
-			<?php echo $this->Html->link(
-					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
-					'http://www.cakephp.org/',
-					array('target' => '_blank', 'escape' => false, 'id' => 'cake-powered')
-				);
-			?>
+		
 			<p>
 				<?php echo $cakeVersion; ?>
 			</p>

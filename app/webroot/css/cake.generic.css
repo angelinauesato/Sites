@@ -76,7 +76,11 @@ p {
 #container {
 	text-align: left;
 }
-
+#in_out {
+	float: right;
+    width: 150px;
+    padding: 10px;
+}
 #header{
 	padding: 10px 20px;
 }
@@ -97,7 +101,7 @@ p {
 	background: #003d4c;
 	text-decoration: underline;
 }
-#content{
+#content {
 	background: #fff;
 	clear: both;
 	color: #333;

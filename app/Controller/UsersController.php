@@ -21,8 +21,7 @@ class UsersController extends AppController {
  * @return void
  */
 	public function index() {
-		print_r(AuthComponent::user());
-		if(AuthComponent::user('role') == '1' or !(AuthComponent::user())){
+		if(!AuthComponent::user()){
 		    $this->redirect(array('controller' => 'topics', 'action' => 'index'));
 		}
 		$this->User->recursive = 0;
@@ -46,7 +45,7 @@ public function login() {
 	
 	public function logout(){
 		$this->Auth->logout();
-		return $this->redirect('/topics/index');
+		return $this->redirect('/pages/home');
 	}
 /**
  * view method
@@ -151,5 +150,16 @@ public function login() {
 	public function getUsernameById($id){
 		$data = $this->User->findById($id);
 		return $data;
+	}
+	
+	public function getRoleNameById($id){
+		if($id == '1'){
+			return 'Reader';
+		}elseif($id == '2'){
+			return 'Admin';
+		}else{
+			return 'Author';
+		}
+		
 	}
 }
