@@ -4,6 +4,12 @@
         
         
         var $components =  array('Session');
+        
+        public function beforeFilter(){
+      
+            $this->Auth->allow('view_posts','findAllPosts', 'view');
+        }
+    
     
         public function index(){
       
@@ -12,18 +18,21 @@
         }
     
         public function add($id){
-            if($this->request->is('post')){
+            // just author and admin can create new posts
+            if(AuthComponent::user('role') == '2' or AuthComponent::user('role') == '3'){
                 
-                $this->Post->create();
-                $this->request->data['Post']['topic_id'] = $id;
-                 $this->request->data['Post']['user_id'] = AuthComponent::user('id');
-                if($this->Post->save($this->request->data)){
-                  $this->Session->setFlash( 'The Post has been created!');
-                      
-                  $this->redirect('/topics/view/'.$id);
+                if($this->request->is('post')){
+                    
+                    $this->Post->create();
+                    $this->request->data['Post']['topic_id'] = $id;
+                     $this->request->data['Post']['user_id'] = AuthComponent::user('id');
+                    if($this->Post->save($this->request->data)){
+                      $this->Session->setFlash( 'The Post has been created!');
+                          
+                      $this->redirect('/topics/view/'.$id);
+                    }
                 }
             }
-            
             $this->set('topics', $this->Post->Topic->find('list'));
         }
         
@@ -58,6 +67,18 @@
               $this->redirect('index');
             }
           }
+        }
+        
+        public function findAllPosts(){
+            return $this->Post->find('all');
+        }
+        
+        	
+        public function view_posts($user_id){
+            $posts = $this->Post->find('all', array(
+            'conditions' => array('Post.user_id ' => $user_id)));
+            return $posts;
+        
         }
     }
 

@@ -7,19 +7,17 @@ p {
         font-size: large;
 }
 #everything {
-        background: #ff0;
+       
         
-        padding-top: 20px;
+        padding: 0px;
         
 }
 #column {
         float: right;
-        width: 300px;
-        
-        padding: 20px;
+        width: 150px;
+        padding: 40px;
 }
 #body {
-    
-        padding: 20px 320px 20px 20px; /* o right, é a soma do width da coluna com o padding desejado */
+        padding: 40px 190px 20px 40px; /* o right, é a soma do width da coluna com o padding desejado */
         text-align: justify;
 }

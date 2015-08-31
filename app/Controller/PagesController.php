@@ -20,6 +20,7 @@
 
 App::uses('AppController', 'Controller');
 
+//App::uses('Controller', 'Posts');
 /**
  * Static content controller
  *
@@ -35,18 +36,25 @@ class PagesController extends AppController {
  *
  * @var array
  */
-	public $uses = array();
-
+public $components = array('Paginator', 'Session');
 	
     public function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allow('display', 'index', 'home');
+        $this->Auth->allow('index', 'view_posts');
     }
 	
 	
 	public function index(){
 		
 		
+	}
+	
+	public function view_posts($user_id){
+		$p = new PostsController;
+		$posts = $p->Post->find('all', array(
+		'conditions' => array('Post.user_id ' => $user_id)));
+		return $posts;
+	
 	}
 	
 	public function home(){
