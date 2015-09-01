@@ -30,7 +30,7 @@ $cakeVersion = __d('cake_dev', 'by Angelina Uesato Oshiro')
     <br />
     
         <div id="everything">
-            
+           
             
         
 		<div id="column">
@@ -39,7 +39,7 @@ $cakeVersion = __d('cake_dev', 'by Angelina Uesato Oshiro')
             <?php $user_a = new UsersController;
 			$authors = $user_a->findUsersByRole("3");
 			foreach($authors as $author) : {
-				echo $author['User']['full_name']." (".($this->HTML->link(count($author['Post']), array('controller' => 'pages', 'action' => 'view_posts', $author['User']['id']))). ")<br />" ;
+				echo $author['User']['full_name'];
 			} endforeach;
 			unset($authors); ?>
 			
@@ -52,21 +52,21 @@ $cakeVersion = __d('cake_dev', 'by Angelina Uesato Oshiro')
 				echo $reader['User']['full_name'] ;
 			} endforeach; ?>
 			
-			<br /> <p><b>Topics</b></p>
+			<br /> <br /><p><b>Topics</b></p>
 			
             <?php $t = new TopicsController;
 			$topics = $t->Topic->find('all');
 			
 			foreach($topics as $topic) : {
-				echo $topic['Topic']['title']." (".($this->HTML->link(count($topic['Post']), array('controller' => 'posts', 'action' => 'view', $topic['Topic']['id']))). ")<br />" ;
+				echo $topic['Topic']['title']." (".($this->HTML->link(count($topic['Post']), array('controller' => 'topics', 'action' => 'view', $topic['Topic']['id']))). ")<br />" ;
 			} endforeach; ?>
         </div>
 		<div id="body">
 			 <?php $p = new PostsController;
 			$posts = $p->findAllPosts();
 			foreach($posts as $post) : {
-				echo '<b>'. $post['Post']['title'].'</b><br />' ;
-				echo substr($post['Post']['body'],0,1000). '...<br /><br /><br /><br />';
+				echo '<h2><b>'. $post['Post']['title'].'</b></h2></b><br />' ;
+				echo '<p style="font-size: 1.1em;">'.substr($post['Post']['body'],0,150). '...' . ($this->HTML->link('Read More', array('controller' => 'posts', 'action' => 'view', $post['Post']['id']))) .'</p><br /><br /><br /><br />';
 				
 			} endforeach; ?>
 		</div>

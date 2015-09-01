@@ -32,14 +32,14 @@ class UsersController extends AppController {
 
     public function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allow('add', 'logout');
+        $this->Auth->allow('add', 'logout', 'getFullnameById');
     }
 
 
 public function login() {
     if ($this->request->is('post')) {
         if ($this->Auth->login()) {
-            return $this->redirect($this->Auth->redirectUrl());
+            return $this->redirect(array('controller' => 'pages', 'action' => 'index'));
         }
         $this->Session->setFlash(__('Invalid username or password, try again'));
     }
@@ -47,7 +47,7 @@ public function login() {
 	
 	public function logout(){
 		$this->Auth->logout();
-		return $this->redirect('/pages/home');
+		return $this->redirect('/pages/index');
 	}
 /**
  * view method
@@ -150,6 +150,11 @@ public function login() {
 	}
 	
 	public function getUsernameById($id){
+		$data = $this->User->findById($id);
+		return $data;
+	}
+	
+	public function getFullnameById($id){
 		$data = $this->User->findById($id);
 		return $data;
 	}

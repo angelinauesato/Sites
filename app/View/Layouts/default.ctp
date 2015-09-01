@@ -37,7 +37,7 @@ $cakeVersion = __d('cake_dev', 'by Angelina Uesato Oshiro')
 			if(AuthComponent::user()) : {
 ?>
 
-			 <?php echo $this->HTML->link('Home', array('controller' => 'topics', 'action' => 'index')); ?> |
+			 <?php echo $this->HTML->link('Home', array('controller' => 'pages', 'action' => 'index')); ?> |
 			 
 			 <?php echo $this->HTML->link('Posts', array('controller' => 'posts', 'action' => 'index')); ?> |
 			 

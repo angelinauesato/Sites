@@ -6,7 +6,7 @@
     
     public function beforeFilter(){
       
-      $this->Auth->allow('index');
+      $this->Auth->allow('index', 'view');
     }
     
     public function index(){
@@ -16,6 +16,7 @@
     }
     
     public function add(){
+      
       
       if($this->request->is('post')){
         

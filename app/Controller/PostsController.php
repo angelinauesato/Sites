@@ -74,12 +74,7 @@
         }
         
         	
-        public function view_posts($user_id){
-            $posts = $this->Post->find('all', array(
-            'conditions' => array('Post.user_id ' => $user_id)));
-            return $posts;
-        
-        }
+       
     }
 
 ?>

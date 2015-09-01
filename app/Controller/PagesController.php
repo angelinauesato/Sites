@@ -40,7 +40,7 @@ public $components = array('Paginator', 'Session');
 	
     public function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allow('index', 'view_posts');
+        $this->Auth->allow('index', 'view_posts', 'display');
     }
 	
 	
@@ -51,10 +51,9 @@ public $components = array('Paginator', 'Session');
 	
 	public function view_posts($user_id){
 		$p = new PostsController;
-		$posts = $p->Post->find('all', array(
+		$data = $p->Post->find('all', array(
 		'conditions' => array('Post.user_id ' => $user_id)));
-		return $posts;
-	
+		$this->set('posts', $data);
 	}
 	
 	public function home(){
@@ -95,5 +94,9 @@ public $components = array('Paginator', 'Session');
 			}
 			throw new NotFoundException();
 		}
+	}
+	
+	public function view(){
+		
 	}
 }

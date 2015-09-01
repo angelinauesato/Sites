@@ -21,3 +21,23 @@ p {
         padding: 40px 190px 20px 40px; /* o right, é a soma do width da coluna com o padding desejado */
         text-align: justify;
 }
+
+.date{
+        margin:0;
+        padding:0;
+        
+        border: 0 ;
+        border-bottom: solid;
+        border-width: 1px;
+        outline:0;
+        font-size:90%;
+        line-height:1.6;
+        vertical-align:baseline;
+        line-height: 1;
+}
+
+#post_body{
+        
+ text-align: justify;        
+
+}
