@@ -26,14 +26,23 @@
 		<td><?php echo h($comment['Comment']['created']); ?>&nbsp;</td>
 		<td><?php echo h($comment['Comment']['modified']); ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $comment['Comment']['id'])); ?>
+			
+			<?php 
+			echo $this->Html->link(__('View'), array('action' => 'view', $comment['Comment']['id'])); ?>
+			<?php if(AuthComponent::user() and (intval(AuthComponent::user('role')) == 2 or intval(AuthComponent::user('id')) == intval($comment['Comment']['user_id']))) : {?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $comment['Comment']['id'])); ?>
 			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $comment['Comment']['id']), array('confirm' => __('Are you sure you want to delete # %s?', $comment['Comment']['id']))); ?>
+			<?php }endif; ?>
+			
 		</td>
 	</tr>
 <?php endforeach; ?>
 	</tbody>
 	</table>
+	<br />
+	<?php echo $this->Html->link(__('Create a new comment'), array('action' => 'add')); ?>
+<br />
+<br />
 	<p>
 	<?php
 	echo $this->Paginator->counter(array(
@@ -48,13 +57,4 @@
 	?>
 	</div>
 </div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('New Comment'), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('List Posts'), array('controller' => 'posts', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Post'), array('controller' => 'posts', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>
-	</ul>
-</div>
+<br />

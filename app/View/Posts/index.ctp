@@ -26,7 +26,7 @@
         
         <?php
         
-        if(AuthComponent::user() and (intval(AuthComponent::user('role')) == 2 or intval(AuthComponent::user('user_id')) == intval($post['Post']['user_id'])))  {?>
+        if(AuthComponent::user() and (intval(AuthComponent::user('role')) == 2 or intval(AuthComponent::user('id')) == intval($post['Post']['user_id'])))  {?>
         <td><?php echo $this->HTML->link('Edit', array('controller' => 'posts', 'action' => 'edit', $post['Post']['id'])); ?></td>
         <td><?php echo $this->Form->postLink('Delete', array('controller' => 'posts', 'action' => 'delete', $post['Post']['id']), array('confirm' => 'Are you sure you want to delete this post?')); ?></td>
         <?php } else {  ?>
