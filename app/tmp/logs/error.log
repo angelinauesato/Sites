@@ -1576,3 +1576,122 @@ Stack Trace:
 #15 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
 #16 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #17 {main}
+2015-09-01 15:02:24 Error: Fatal Error (1): Class 'CommentsController' not found in [/Users/Uesato/Sites/app/View/Posts/view.ctp, line 68]
+2015-09-01 15:02:24 Error: [FatalErrorException] Class 'CommentsController' not found
+Request URL: /posts/view/2
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Class 'Comments...', '/Users/Uesato/S...', 68)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Comments...', '/Users/Uesato/S...', 68, Array)
+#2 /Users/Uesato/Sites/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Class 'Comments...', '/Users/Uesato/S...', 68, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-01 15:02:39 Error: Fatal Error (1): Call to undefined method CommentsController::find() in [/Users/Uesato/Sites/app/View/Posts/view.ctp, line 69]
+2015-09-01 15:02:39 Error: [FatalErrorException] Call to undefined method CommentsController::find()
+Request URL: /posts/view/2
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Users/Uesato/S...', 69)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Users/Uesato/S...', 69, Array)
+#2 /Users/Uesato/Sites/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Users/Uesato/S...', 69, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-01 15:09:36 Error: Fatal Error (1): Call to undefined method CommentsController::find() in [/Users/Uesato/Sites/app/View/Posts/view.ctp, line 69]
+2015-09-01 15:09:36 Error: [FatalErrorException] Call to undefined method CommentsController::find()
+Request URL: /posts/view/2
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Users/Uesato/S...', 69)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Users/Uesato/S...', 69, Array)
+#2 /Users/Uesato/Sites/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Users/Uesato/S...', 69, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-01 15:13:02 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'findCommentsByPostId' at line 1
+Request URL: /posts/view/2
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('findCommentsByP...', Array)
+#2 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(669): DboSource->execute('findCommentsByP...', Array, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(612): DboSource->fetchAll('findCommentsByP...', Array, Array)
+#4 /Users/Uesato/Sites/lib/Cake/Model/Model.php(827): DboSource->query('findCommentsByP...', Array, Object(Comment))
+#5 /Users/Uesato/Sites/app/View/Posts/view.ctp(69): Model->__call('findCommentsByP...', Array)
+#6 /Users/Uesato/Sites/app/View/Posts/view.ctp(69): Comment->findCommentsByPostId(2)
+#7 /Users/Uesato/Sites/lib/Cake/View/View.php(971): include('/Users/Uesato/S...')
+#8 /Users/Uesato/Sites/lib/Cake/View/View.php(933): View->_evaluate('/Users/Uesato/S...', Array)
+#9 /Users/Uesato/Sites/lib/Cake/View/View.php(473): View->_render('/Users/Uesato/S...')
+#10 /Users/Uesato/Sites/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#11 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#12 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#13 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2015-09-01 15:13:46 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'findCommentsByPostId' at line 1
+Request URL: /posts/view/2
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('findCommentsByP...', Array)
+#2 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(669): DboSource->execute('findCommentsByP...', Array, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(612): DboSource->fetchAll('findCommentsByP...', Array, Array)
+#4 /Users/Uesato/Sites/lib/Cake/Model/Model.php(827): DboSource->query('findCommentsByP...', Array, Object(Comment))
+#5 /Users/Uesato/Sites/app/View/Posts/view.ctp(69): Model->__call('findCommentsByP...', Array)
+#6 /Users/Uesato/Sites/app/View/Posts/view.ctp(69): Comment->findCommentsByPostId(2)
+#7 /Users/Uesato/Sites/lib/Cake/View/View.php(971): include('/Users/Uesato/S...')
+#8 /Users/Uesato/Sites/lib/Cake/View/View.php(933): View->_evaluate('/Users/Uesato/S...', Array)
+#9 /Users/Uesato/Sites/lib/Cake/View/View.php(473): View->_render('/Users/Uesato/S...')
+#10 /Users/Uesato/Sites/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#11 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#12 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#13 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2015-09-01 15:34:55 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Post.post_id' in 'field list'
+Request URL: /posts/view/4
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('SELECT `Post`.`...', Array)
+#2 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(669): DboSource->execute('SELECT `Post`.`...', Array, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(1452): DboSource->fetchAll('SELECT `Post`.`...', false)
+#4 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(1286): DboSource->_fetchHasMany(Object(Comment), 'SELECT `Post`.`...', Array)
+#5 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(1145): DboSource->queryAssociation(Object(Comment), Object(Post), 'hasMany', 'Post', Array, Array, true, Array, 0, Array)
+#6 /Users/Uesato/Sites/lib/Cake/Model/Model.php(3026): DboSource->read(Object(Comment), Array)
+#7 /Users/Uesato/Sites/lib/Cake/Model/Model.php(2998): Model->_readDataSource('first', Array)
+#8 /Users/Uesato/Sites/lib/Cake/Model/Datasource/DboSource.php(600): Model->find('first', Array)
+#9 /Users/Uesato/Sites/lib/Cake/Model/Model.php(827): DboSource->query('findByPostId', Array, Object(Comment))
+#10 /Users/Uesato/Sites/app/Controller/CommentsController.php(134): Model->__call('findByPostId', Array)
+#11 /Users/Uesato/Sites/app/Controller/CommentsController.php(134): Comment->findByPostId(4)
+#12 /Users/Uesato/Sites/app/View/Posts/view.ctp(69): CommentsController->findCommentsByPostId(4)
+#13 /Users/Uesato/Sites/lib/Cake/View/View.php(971): include('/Users/Uesato/S...')
+#14 /Users/Uesato/Sites/lib/Cake/View/View.php(933): View->_evaluate('/Users/Uesato/S...', Array)
+#15 /Users/Uesato/Sites/lib/Cake/View/View.php(473): View->_render('/Users/Uesato/S...')
+#16 /Users/Uesato/Sites/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#17 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#18 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#19 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#20 {main}
+2015-09-01 15:43:21 Error: Fatal Error (1): Call to a member function success() on null in [/Users/Uesato/Sites/app/Controller/CommentsController.php, line 125]
+2015-09-01 15:43:21 Error: [FatalErrorException] Call to a member function success() on null
+Request URL: /comments/delete/7
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Users/Uesato/S...', 125)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Users/Uesato/S...', 125, Array)
+#2 /Users/Uesato/Sites/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Users/Uesato/S...', 125, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-01 15:44:41 Error: [NotFoundException] Invalid comment
+Request URL: /comments/delete/7
+Stack Trace:
+#0 [internal function]: CommentsController->delete('7')
+#1 /Users/Uesato/Sites/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(CommentsController), Array)
+#2 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(CommentsController), Object(CakeRequest))
+#4 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-09-01 15:45:40 Error: Fatal Error (1): Call to a member function success() on null in [/Users/Uesato/Sites/app/Controller/UsersController.php, line 145]
+2015-09-01 15:45:40 Error: [FatalErrorException] Call to a member function success() on null
+Request URL: /users/delete/17
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Users/Uesato/S...', 145)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Users/Uesato/S...', 145, Array)
+#2 /Users/Uesato/Sites/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Users/Uesato/S...', 145, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

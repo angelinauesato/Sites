@@ -73,8 +73,7 @@
             return $this->Post->find('all');
         }
         
-        	
-       
+      
     }
 
 ?>

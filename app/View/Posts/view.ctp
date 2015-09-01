@@ -2,6 +2,7 @@
   App::import('Controller', 'Users');
   App::import('Controller', 'Topics');
   App::import('Controller', 'Posts');
+  App::import('Controller', 'Comments');
   
 
 $cakeDescription = __d('cake_dev', 'iStock Sample Project');
@@ -64,12 +65,20 @@ $cakeVersion = __d('cake_dev', 'by Angelina Uesato Oshiro')
 			 <?php 
               $user = new UsersController;
               $username = $user->getFullnameById( $post['Post']['user_id'] );
+			 
 				echo '<h2><b>'. $post['Post']['title'].'</b></h2><br />' ;
                 echo '<spam class="date"> Published: '. $post['Post']['created'] . '<br />'.
                 'Last updated:'. $post['Post']['modified'] . '<br />
                 Created by:' .$username['User']['full_name']  .'</spam><br />';
-				echo '<br /><p style="font-size: 1.2em;">'.$post['Post']['body']. '</p><br /><br /><br /><br />';
-			
+				echo '<br /><p style="font-size: 1.2em;">'.$post['Post']['body']. '</p><br /><br />';
+				echo '<b> Comments: </b>';
+				foreach($post['Comment'] as $comment){
+					if( isset($comment['post_id']) and $comment['post_id'] == $post['Post']['id']){
+						echo '<br /> <br /><div style="border: solid;
+        border-width: 1px;"><spam >' . $comment['body'] . '</spam> <br /></div>';
+					}
+					
+				}
              ?>
 		</div>
         </div>

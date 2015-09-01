@@ -142,9 +142,9 @@ public function login() {
 		}
 		$this->request->allowMethod('post', 'delete');
 		if ($this->User->delete()) {
-			$this->Flash->success(__('The user has been deleted.'));
+			$this->Session->setFlashs(__('The user has been deleted.'));
 		} else {
-			$this->Flash->error(__('The user could not be deleted. Please, try again.'));
+			$this->Session->setFlash(__('The user could not be deleted. Please, try again.'));
 		}
 		return $this->redirect(array('action' => 'index'));
 	}
