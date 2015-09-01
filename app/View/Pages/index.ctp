@@ -2,6 +2,7 @@
   App::import('Controller', 'Users');
   App::import('Controller', 'Topics');
   App::import('Controller', 'Posts');
+  App::import('Controller', 'Comments');
   
 
 $cakeDescription = __d('cake_dev', 'iStock Sample Project');
@@ -68,9 +69,16 @@ $cakeVersion = __d('cake_dev', 'by Angelina Uesato Oshiro')
 			$p = $p->findAllPosts();
 			
 			foreach($p as $post) : {
+			  $c = new CommentsController;
+			  $comments = $c->Comment->find('count', array(
+        'conditions' => array('Comment.post_id' => $post['Post']['id'])));
+			  
+			  
 				echo '<h2><b>'. $post['Post']['title'].'</b></h2></b><br />' ;
-				echo '<p style="font-size: 1.1em;">'.substr($post['Post']['body'],0,150). '...' . ($this->HTML->link('Read More', array('controller' => 'posts', 'action' => 'view', $post['Post']['id']))) .'</p><br /><br /><br /><br />';
-				
+				echo '<p style="font-size: 1.1em;">'.substr($post['Post']['body'],0,150). '...' . ($this->HTML->link('Read More', array('controller' => 'posts', 'action' => 'view', $post['Post']['id']))) .'</p>';
+				echo ' <b>Comment:</b> '. $comments . '<br />'.
+               '<br /><br /><br />';
+			   unset($comments);
 			} endforeach; ?>
 		</div>
         </div>
