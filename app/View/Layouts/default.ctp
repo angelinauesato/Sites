@@ -56,6 +56,7 @@ $cakeVersion = __d('cake_dev', 'by Angelina Uesato Oshiro')
 	<div id="in_out">
 	<?php
     if(AuthComponent::user()){
+	  echo 'You are logged in as: ' . AuthComponent::user('username'). ' | ';
       echo $this->HTML->link('Logout', array('controller' => 'users', 'action' => 'logout'));
     }else{
       echo $this->HTML->link('Login', array('controller' => 'users', 'action' => 'login')) . ' or ' .

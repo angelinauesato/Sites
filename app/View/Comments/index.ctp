@@ -1,4 +1,4 @@
-<div class="comments index">
+<div >
 	<h2><?php echo __('Comments'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<thead>

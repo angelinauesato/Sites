@@ -78,7 +78,8 @@ p {
 }
 #in_out {
 	float: right;
-    width: 150px;
+	text-align: right;
+    width: 350px;
     padding: 10px;
 }
 #header{

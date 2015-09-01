@@ -2,7 +2,7 @@
   App::import('Controller', 'Users');
 ?>
 
-<div class="users index">
+<div>
 	
 <?php  echo $this->Session->flash(); ?>
 	<table cellpadding="0" cellspacing="0">
