@@ -3,7 +3,7 @@
 ?>
 
 <h1><b>TITLE:</b> <?php
- echo $topic['Topic']['title'];
+ echo isset($topic['Topic']['title']) ? $topic['Topic']['title'] : '-';
 ?></h1>
 
 <table>
@@ -13,10 +13,10 @@
  
 <?php
 $counter = 1;
-if(count($topic['Post'])==0){
+if(!isset($topic['Post'])){
  
  echo '<tr><td colspan="3" style="text-align:center"> No data(s) found!</td></tr>';
-}else{
+ }else{
  
   foreach($topic['Post'] as $post) {
    $user = new UsersController;
@@ -29,4 +29,10 @@ if(count($topic['Post'])==0){
 
 </table>
 
-<?php if(AuthComponent::user() and AuthComponent::user('role') <> 1){ echo $this->HTML->link('Create a post in this topic', array('controller' => 'posts', 'action' => 'add', $topic['Topic']['id']));} ?>
+<?php
+if(!isset($topic)){
+ 
+if(AuthComponent::user() and AuthComponent::user('role') <> 1){
+  echo $this->HTML->link('Create a post in this topic', array('controller' => 'posts', 'action' => 'add', $topic['Topic']['id']));
+  } 
+}?>

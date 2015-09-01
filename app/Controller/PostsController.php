@@ -17,7 +17,7 @@
           $this->set('posts', $data);
         }
     
-        public function add($id){
+        public function add($id=0){
             // just author and admin can create new posts
             if(AuthComponent::user('role') == '2' or AuthComponent::user('role') == '3'){
                 

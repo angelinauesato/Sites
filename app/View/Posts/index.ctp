@@ -6,7 +6,7 @@
 
   <h1> Posts</h1>
   <table>
-      <th>User ID</th>
+      <th>Post ID</th>
       <th>Topic ID</th>
       <th>Title</th>
       <th>Body</th>
@@ -22,7 +22,11 @@
         <td><?php echo substr($post['Post']['body'], 0, 100); ?></td>
         <td><?php echo $post['Post']['created']; ?></td>
         <td><?php echo $post['Post']['modified']; ?></td>
-        <?php if(AuthComponent::user() and (intval(AuthComponent::user('role')) == 2 or intval(AuthComponent::user('role')) == intval($post['Post']['user_id'])))  {?>
+        
+        
+        <?php
+        
+        if(AuthComponent::user() and (intval(AuthComponent::user('role')) == 2 or intval(AuthComponent::user('user_id')) == intval($post['Post']['user_id'])))  {?>
         <td><?php echo $this->HTML->link('Edit', array('controller' => 'posts', 'action' => 'edit', $post['Post']['id'])); ?></td>
         <td><?php echo $this->Form->postLink('Delete', array('controller' => 'posts', 'action' => 'delete', $post['Post']['id']), array('confirm' => 'Are you sure you want to delete this post?')); ?></td>
         <?php } else {  ?>
@@ -33,3 +37,9 @@
       <?php endforeach; ?>
   </table>
   <?php unset($post); ?>
+  <br />
+  <?php
+  if(AuthComponent::user() and (intval(AuthComponent::user('role')) == 2 or intval(AuthComponent::user('role')) == 3)) {
+    echo $this->HTML->link('Create a new post', array('controller' => 'posts', 'action' => 'add'));
+  }
+   ?>

@@ -8,7 +8,7 @@
   <h1> Topics</h1>
   <table>
       <th>Title</th>
-      <th>User ID</th>
+      <th>Username</th>
       
       <th>Created</th>
       <th>Modified</th>
@@ -54,7 +54,7 @@
   </table>
   <br />
   <?php
-  if(AuthComponent::user()) {
+  if(AuthComponent::user() and (intval(AuthComponent::user('role')) == 2 or intval(AuthComponent::user('role')) == 3)) {
     echo $this->HTML->link('Create a new topic', array('controller' => 'topics', 'action' => 'add'));
   }
    ?>
