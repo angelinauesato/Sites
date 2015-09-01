@@ -1186,3 +1186,272 @@ Stack Trace:
 #3 /Users/Uesato/Sites/lib/Cake/Core/App.php(906): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2015-09-01 06:34:02 Error: [MissingTableException] Table pages for model Page was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'pages',
+  'class' => 'Page',
+  'ds' => 'default',
+)
+Request URL: /pages/index
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Model/Model.php(3648): Model->setSource('pages')
+#1 /Users/Uesato/Sites/lib/Cake/Model/Model.php(3026): Model->getDataSource()
+#2 /Users/Uesato/Sites/lib/Cake/Model/Model.php(2998): Model->_readDataSource('all', Array)
+#3 /Users/Uesato/Sites/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /Users/Uesato/Sites/app/Controller/PagesController.php(50): PaginatorComponent->paginate()
+#5 [internal function]: PagesController->index()
+#6 /Users/Uesato/Sites/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#7 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#8 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#9 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2015-09-01 06:36:24 Error: [MissingTableException] Table pages for model Page was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'pages',
+  'class' => 'Page',
+  'ds' => 'default',
+)
+Request URL: /pages/index
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Model/Model.php(3648): Model->setSource('pages')
+#1 /Users/Uesato/Sites/lib/Cake/Model/Model.php(3026): Model->getDataSource()
+#2 /Users/Uesato/Sites/lib/Cake/Model/Model.php(2998): Model->_readDataSource('all', Array)
+#3 /Users/Uesato/Sites/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /Users/Uesato/Sites/app/Controller/PagesController.php(50): PaginatorComponent->paginate()
+#5 [internal function]: PagesController->index()
+#6 /Users/Uesato/Sites/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#7 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#8 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#9 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2015-09-01 06:36:41 Error: [MissingTableException] Table pages for model Page was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'pages',
+  'class' => 'Page',
+  'ds' => 'default',
+)
+Request URL: /pages/index
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Model/Model.php(3648): Model->setSource('pages')
+#1 /Users/Uesato/Sites/lib/Cake/Model/Model.php(3026): Model->getDataSource()
+#2 /Users/Uesato/Sites/lib/Cake/Model/Model.php(2998): Model->_readDataSource('all', Array)
+#3 /Users/Uesato/Sites/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /Users/Uesato/Sites/app/Controller/PagesController.php(50): PaginatorComponent->paginate()
+#5 [internal function]: PagesController->index()
+#6 /Users/Uesato/Sites/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#7 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#8 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#9 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2015-09-01 06:38:47 Error: Fatal Error (1): Call to a member function paginate() on null in [/Users/Uesato/Sites/app/View/Pages/index.ctp, line 69]
+2015-09-01 06:38:47 Error: [FatalErrorException] Call to a member function paginate() on null
+Request URL: /pages/index
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Users/Uesato/S...', 69)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Users/Uesato/S...', 69, Array)
+#2 /Users/Uesato/Sites/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Users/Uesato/S...', 69, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-01 06:39:22 Error: Fatal Error (1): Call to a member function paginate() on null in [/Users/Uesato/Sites/app/View/Pages/index.ctp, line 69]
+2015-09-01 06:39:22 Error: [FatalErrorException] Call to a member function paginate() on null
+Request URL: /pages/index
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Users/Uesato/S...', 69)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Users/Uesato/S...', 69, Array)
+#2 /Users/Uesato/Sites/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Users/Uesato/S...', 69, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-01 06:41:58 Error: Fatal Error (1): Call to a member function paginate() on null in [/Users/Uesato/Sites/app/View/Pages/index.ctp, line 70]
+2015-09-01 06:41:58 Error: [FatalErrorException] Call to a member function paginate() on null
+Request URL: /pages/index
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Users/Uesato/S...', 70)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Users/Uesato/S...', 70, Array)
+#2 /Users/Uesato/Sites/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Users/Uesato/S...', 70, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-01 06:42:17 Error: Fatal Error (1): Call to a member function paginate() on null in [/Users/Uesato/Sites/app/View/Pages/index.ctp, line 70]
+2015-09-01 06:42:17 Error: [FatalErrorException] Call to a member function paginate() on null
+Request URL: /pages/index
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Users/Uesato/S...', 70)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Users/Uesato/S...', 70, Array)
+#2 /Users/Uesato/Sites/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Users/Uesato/S...', 70, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-01 06:42:24 Error: Fatal Error (1): Call to a member function paginate() on null in [/Users/Uesato/Sites/app/View/Pages/index.ctp, line 70]
+2015-09-01 06:42:24 Error: [FatalErrorException] Call to a member function paginate() on null
+Request URL: /pages/index
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Users/Uesato/S...', 70)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Users/Uesato/S...', 70, Array)
+#2 /Users/Uesato/Sites/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Users/Uesato/S...', 70, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-01 06:44:13 Error: [MissingTableException] Table pages for model Page was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'pages',
+  'class' => 'Page',
+  'ds' => 'default',
+)
+Request URL: /pages/index
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Model/Model.php(3648): Model->setSource('pages')
+#1 /Users/Uesato/Sites/lib/Cake/Model/Model.php(3026): Model->getDataSource()
+#2 /Users/Uesato/Sites/lib/Cake/Model/Model.php(2998): Model->_readDataSource('all', Array)
+#3 /Users/Uesato/Sites/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /Users/Uesato/Sites/app/Controller/PagesController.php(49): PaginatorComponent->paginate()
+#5 [internal function]: PagesController->index()
+#6 /Users/Uesato/Sites/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#7 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#8 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#9 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2015-09-01 06:44:27 Error: [MissingTableException] Table pages for model Page was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'pages',
+  'class' => 'Page',
+  'ds' => 'default',
+)
+Request URL: /pages/index
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Model/Model.php(3648): Model->setSource('pages')
+#1 /Users/Uesato/Sites/lib/Cake/Model/Model.php(3026): Model->getDataSource()
+#2 /Users/Uesato/Sites/lib/Cake/Model/Model.php(2998): Model->_readDataSource('all', Array)
+#3 /Users/Uesato/Sites/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /Users/Uesato/Sites/app/Controller/PagesController.php(49): PaginatorComponent->paginate()
+#5 [internal function]: PagesController->index()
+#6 /Users/Uesato/Sites/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#7 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#8 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#9 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2015-09-01 06:44:35 Error: [MissingTableException] Table pages for model Page was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'pages',
+  'class' => 'Page',
+  'ds' => 'default',
+)
+Request URL: /pages/index
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Model/Model.php(3648): Model->setSource('pages')
+#1 /Users/Uesato/Sites/lib/Cake/Model/Model.php(3026): Model->getDataSource()
+#2 /Users/Uesato/Sites/lib/Cake/Model/Model.php(2998): Model->_readDataSource('all', Array)
+#3 /Users/Uesato/Sites/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /Users/Uesato/Sites/app/Controller/PagesController.php(49): PaginatorComponent->paginate()
+#5 [internal function]: PagesController->index()
+#6 /Users/Uesato/Sites/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#7 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#8 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#9 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2015-09-01 06:44:53 Error: [MissingTableException] Table pages for model Page was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'pages',
+  'class' => 'Page',
+  'ds' => 'default',
+)
+Request URL: /pages/index
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Model/Model.php(3648): Model->setSource('pages')
+#1 /Users/Uesato/Sites/lib/Cake/Model/Model.php(3026): Model->getDataSource()
+#2 /Users/Uesato/Sites/lib/Cake/Model/Model.php(2998): Model->_readDataSource('all', Array)
+#3 /Users/Uesato/Sites/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /Users/Uesato/Sites/app/Controller/PagesController.php(48): PaginatorComponent->paginate()
+#5 [internal function]: PagesController->index()
+#6 /Users/Uesato/Sites/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#7 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#8 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#9 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2015-09-01 06:45:53 Error: [MissingTableException] Table pages for model Page was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'pages',
+  'class' => 'Page',
+  'ds' => 'default',
+)
+Request URL: /pages/index
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Model/Model.php(3648): Model->setSource('pages')
+#1 /Users/Uesato/Sites/lib/Cake/Model/Model.php(3026): Model->getDataSource()
+#2 /Users/Uesato/Sites/lib/Cake/Model/Model.php(2998): Model->_readDataSource('all', Array)
+#3 /Users/Uesato/Sites/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /Users/Uesato/Sites/app/Controller/PagesController.php(48): PaginatorComponent->paginate()
+#5 [internal function]: PagesController->index()
+#6 /Users/Uesato/Sites/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#7 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#8 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#9 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2015-09-01 06:46:11 Error: [MissingTableException] Table pages for model Page was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'pages',
+  'class' => 'Page',
+  'ds' => 'default',
+)
+Request URL: /pages/index
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Model/Model.php(3648): Model->setSource('pages')
+#1 /Users/Uesato/Sites/lib/Cake/Model/Model.php(3026): Model->getDataSource()
+#2 /Users/Uesato/Sites/lib/Cake/Model/Model.php(2998): Model->_readDataSource('all', Array)
+#3 /Users/Uesato/Sites/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /Users/Uesato/Sites/app/Controller/PagesController.php(48): PaginatorComponent->paginate()
+#5 [internal function]: PagesController->index()
+#6 /Users/Uesato/Sites/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#7 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#8 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#9 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2015-09-01 06:46:14 Error: [MissingTableException] Table pages for model Page was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'pages',
+  'class' => 'Page',
+  'ds' => 'default',
+)
+Request URL: /pages/index
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Model/Model.php(3648): Model->setSource('pages')
+#1 /Users/Uesato/Sites/lib/Cake/Model/Model.php(3026): Model->getDataSource()
+#2 /Users/Uesato/Sites/lib/Cake/Model/Model.php(2998): Model->_readDataSource('all', Array)
+#3 /Users/Uesato/Sites/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /Users/Uesato/Sites/app/Controller/PagesController.php(48): PaginatorComponent->paginate()
+#5 [internal function]: PagesController->index()
+#6 /Users/Uesato/Sites/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#7 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#8 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#9 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2015-09-01 06:48:52 Error: [MissingTableException] Table pages for model Page was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'pages',
+  'class' => 'Page',
+  'ds' => 'default',
+)
+Request URL: /pages/index
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Model/Model.php(3648): Model->setSource('pages')
+#1 /Users/Uesato/Sites/lib/Cake/Model/Model.php(3026): Model->getDataSource()
+#2 /Users/Uesato/Sites/lib/Cake/Model/Model.php(2998): Model->_readDataSource('all', Array)
+#3 /Users/Uesato/Sites/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#4 /Users/Uesato/Sites/app/Controller/PagesController.php(48): PaginatorComponent->paginate()
+#5 [internal function]: PagesController->index()
+#6 /Users/Uesato/Sites/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#7 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#8 /Users/Uesato/Sites/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#9 /Users/Uesato/Sites/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2015-09-01 12:19:05 Error: Fatal Error (1): Call to a member function success() on null in [/Users/Uesato/Sites/app/Controller/CommentsController.php, line 64]
+2015-09-01 12:19:05 Error: [FatalErrorException] Call to a member function success() on null
+Request URL: /comments/add
+Stack Trace:
+#0 /Users/Uesato/Sites/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Users/Uesato/S...', 64)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Users/Uesato/S...', 64, Array)
+#2 /Users/Uesato/Sites/lib/Cake/Core/App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Users/Uesato/S...', 64, Array)
+#3 /Users/Uesato/Sites/lib/Cake/Core/App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

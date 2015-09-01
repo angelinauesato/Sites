@@ -45,7 +45,7 @@ $cakeVersion = __d('cake_dev', 'by Angelina Uesato Oshiro')
 			 
 			 <?php echo $this->HTML->link('Users', array('controller' => 'users', 'action' => 'index')); ?> |
 			 
-			 <?php echo $this->HTML->link('Coments', array('controller' => 'topics', 'action' => 'index')); ?> |
+			 <?php echo $this->HTML->link('Coments', array('controller' => 'comments', 'action' => 'index')); ?> |
 			   
   
 <?php

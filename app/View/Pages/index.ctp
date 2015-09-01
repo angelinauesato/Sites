@@ -63,8 +63,11 @@ $cakeVersion = __d('cake_dev', 'by Angelina Uesato Oshiro')
         </div>
 		<div id="body">
 			 <?php $p = new PostsController;
-			$posts = $p->findAllPosts();
-			foreach($posts as $post) : {
+			 
+			 	
+			$p = $p->findAllPosts();
+			
+			foreach($p as $post) : {
 				echo '<h2><b>'. $post['Post']['title'].'</b></h2></b><br />' ;
 				echo '<p style="font-size: 1.1em;">'.substr($post['Post']['body'],0,150). '...' . ($this->HTML->link('Read More', array('controller' => 'posts', 'action' => 'view', $post['Post']['id']))) .'</p><br /><br /><br /><br />';
 				

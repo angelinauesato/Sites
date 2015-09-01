@@ -45,8 +45,7 @@ public $components = array('Paginator', 'Session');
 	
 	
 	public function index(){
-		
-		
+	
 	}
 	
 	public function view_posts($user_id){

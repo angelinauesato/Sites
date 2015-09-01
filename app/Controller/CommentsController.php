@@ -15,6 +15,12 @@ class CommentsController extends AppController {
  */
 	public $components = array('Paginator');
 
+	  
+        public function beforeFilter(){
+      
+            $this->Auth->allow('index','view', 'add');
+        }
+    
 /**
  * index method
  *
@@ -48,16 +54,22 @@ class CommentsController extends AppController {
 	public function add() {
 		if ($this->request->is('post')) {
 			$this->Comment->create();
+			if(AuthComponent::user()){
+				$this->request->data['Comment']['user_id'] = AuthComponent::user('id');
+			}else{
+				$this->request->data['Comment']['user_id'] = 0;	
+			}
+			
 			if ($this->Comment->save($this->request->data)) {
-				$this->Flash->success(__('The comment has been saved.'));
+				 $this->Session->setFlash( 'The comment has been saved.');
 				return $this->redirect(array('action' => 'index'));
 			} else {
 				$this->Flash->error(__('The comment could not be saved. Please, try again.'));
 			}
 		}
-		$posts = $this->Comment->Post->find('list');
-		$users = $this->Comment->User->find('list');
-		$this->set(compact('posts', 'users'));
+		$this->set('posts', $this->Comment->Post->find('list'));
+		$this->set('users', $this->Comment->User->find('list'));
+		
 	}
 
 /**

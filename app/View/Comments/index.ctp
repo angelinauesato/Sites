@@ -20,9 +20,9 @@
 			<?php echo $this->Html->link($comment['Post']['title'], array('controller' => 'posts', 'action' => 'view', $comment['Post']['id'])); ?>
 		</td>
 		<td>
-			<?php echo $this->Html->link($comment['User']['id'], array('controller' => 'users', 'action' => 'view', $comment['User']['id'])); ?>
+			<?php echo $comment['User']['full_name']; ?>
 		</td>
-		<td><?php echo h($comment['Comment']['body']); ?>&nbsp;</td>
+		<td><?php echo h(substr($comment['Comment']['body'], 0, 100)) . ((strlen($comment['Comment']['body']) > 100 ? '...' : '')); ?>&nbsp;</td>
 		<td><?php echo h($comment['Comment']['created']); ?>&nbsp;</td>
 		<td><?php echo h($comment['Comment']['modified']); ?>&nbsp;</td>
 		<td class="actions">
